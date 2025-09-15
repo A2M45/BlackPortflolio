@@ -10,6 +10,21 @@
   <header>
     <h1>BlackHat</h1>
     <p class="subtitle">Portfolio et projets</p>
+    <header>
+  <div class="header-container">
+    <h1>BlackHat</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="subtitle">Portfolio et projets</p>
+</header>
+
   </header>
 
   <section class="banner">
@@ -206,7 +221,35 @@ footer {
   background: #1a1a1a;
   font-size: 0.9rem;
 }
+    /* --- Barre de navigation --- */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e50914; /* rouge léger au survol */
+}
+
 
   </styles>
 </html>
+
 
