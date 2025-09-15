@@ -10,14 +10,24 @@
   <header>
     <h1>BlackHat</h1>
     <p class="subtitle">Portfolio et projets</p>
-  </header>
+  <div class="header-container">
+    <h1>BlackHat</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="subtitle">Portfolio et projets</p>
+</header>
+
+
 
   <section class="banner">
-    <div class="banner-content">
-      <h2>Bienvenue dans mon univers</h2>
-      <p>Exploration, cybersécurité et créativité</p>
-    </div>
-    <img src="paper.jpg" alt="Bannière BlackHat">
+    <div class="banner-text">Bienvenue dans mon univers</div>
   </section>
 
   <main>
@@ -31,12 +41,11 @@
       <h2>Projets récents</h2>
 
       <div class="project">
-  <img src="html.png" alt="HTML">
-  <h3>J'apprend le developpement web de A à Z :</h3>
-  <p>J'ai commencer a apprendre le developpement web De A a Z</p>
-  <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="btn">En voir plus</a>
-</div>
-
+        <img src="html.png" alt="HTML">
+        <h3>J'apprends le développement web de A à Z</h3>
+        <p>J'ai commencé à apprendre le développement web de A à Z.</p>
+        <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="btn">En voir plus</a>
+      </div>
     </section>
 
     <section class="contact">
@@ -57,8 +66,8 @@
     <p>© 2025 BlackHat – Tous droits réservés</p>
   </footer>
 </body>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
+  <styles>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -88,41 +97,27 @@ header .subtitle {
   color: #aaa;
 }
 
+/* --- Bannière --- */
 .banner {
-  width: 2560px;
-  max-width: 100%;
-  height: 340px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
+  margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgba(0,0,0,0.4);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-}
-
-.banner-content h2 {
+.banner-text {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
+/* --- Main content --- */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -135,6 +130,7 @@ main h2 {
   margin-bottom: 1rem;
 }
 
+/* --- Projects --- */
 .projects .project {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -173,6 +169,7 @@ main h2 {
   background: #555;
 }
 
+/* --- Contact --- */
 .contact {
   max-width: 600px;
   margin: 3rem auto;
@@ -216,66 +213,38 @@ main h2 {
   background: #555;
 }
 
+/* --- Footer --- */
 footer {
   text-align: center;
   padding: 1.5rem;
   background: #1a1a1a;
   font-size: 0.9rem;
 }
-#projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
+    /* --- Barre de navigation --- */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.project {
-  background: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.project img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.project h3 {
-  margin: 15px 0 5px;
-  font-size: 1.4rem;
-}
-
-.project p {
-  padding: 0 15px;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-.project .btn {
-  display: inline-block;
-  margin: 15px 0 20px;
-  padding: 8px 18px;
-  background: #e50914;
-  color: #fff;
-  border-radius: 6px;
+nav a {
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.project .btn:hover {
-  background: #b00710;
+nav a:hover {
+  color: #e50914; /* rouge léger au survol */
 }
-
-.project:hover {
-  transform: translateY(-5px);
-}
-
-</style>
+  </styles>
 </html>
-
-
