@@ -5,197 +5,41 @@
   <title>BlackHat – Portfolio</title>
   <meta name="description" content="Portfolio BlackHat">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
-
-    * {margin:0;padding:0;box-sizing:border-box;}
-
-    body {
-      font-family:'Inter',sans-serif;
-      background:#121212;
-      color:#fff;
-      line-height:1.6;
-    }
-
-    /* --- Header + nav --- */
-    header {
-      padding:2rem 1rem;
-      background:#121212;
-    }
-
-    .header-container {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      max-width:900px;
-      margin:0 auto;
-    }
-
-    header h1 {
-      font-family:'Dancing Script',cursive;
-      font-size:2.5rem;
-    }
-
-    nav ul {
-      list-style:none;
-      display:flex;
-      gap:1.5rem;
-    }
-
-    nav a {
-      text-decoration:none;
-      color:#fff;
-      font-weight:500;
-      transition:color .3s;
-    }
-
-    nav a:hover {color:#e50914;}
-
-    .subtitle {
-      text-align:center;
-      font-size:1.1rem;
-      color:#aaa;
-      margin-top:.5rem;
-    }
-
-    /* --- Bannière --- */
-    .banner {
-      width:100%;
-      height:300px;
-      background:rgba(0,0,0,0.8);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      border-radius:12px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.3);
-      margin:0 auto;
-    }
-
-    .banner-text {
-      font-family:'Dancing Script',cursive;
-      font-size:2.5rem;
-      text-align:center;
-      text-shadow:2px 2px 6px rgba(0,0,0,0.7);
-    }
-
-    /* --- Main --- */
-    main {
-      max-width:900px;
-      margin:2rem auto;
-      padding:0 1rem;
-    }
-    main h2 {
-      font-family:'Dancing Script',cursive;
-      font-size:2rem;
-      margin-bottom:1rem;
-    }
-
-    /* --- Projects --- */
-    .projects .project {
-      margin-bottom:2rem;
-      padding:1rem;
-      background:#1e1e1e;
-      border-radius:8px;
-    }
-    .projects h3 {
-      font-family:'Caveat',cursive;
-      font-size:1.8rem;
-      margin-bottom:.5rem;
-    }
-    .project img {
-      width:100%;
-      max-height:250px;
-      object-fit:cover;
-      border-radius:6px;
-      margin-bottom:.5rem;
-    }
-    .project .btn {
-      display:inline-block;
-      padding:.5rem 1rem;
-      background:#333;
-      color:#fff;
-      text-decoration:none;
-      border-radius:4px;
-    }
-    .project .btn:hover {background:#555;}
-
-    /* --- Contact --- */
-    .contact {
-      max-width:600px;
-      margin:3rem auto;
-      padding:2rem;
-      background:#1e1e1e;
-      border-radius:8px;
-    }
-    .contact form {
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
-    }
-    .contact input, .contact textarea {
-      width:100%;
-      padding:.7rem;
-      border:none;
-      border-radius:4px;
-      font-size:1rem;
-    }
-    .contact button {
-      background:#333;
-      color:#fff;
-      padding:.8rem;
-      border:none;
-      border-radius:4px;
-      font-size:1rem;
-      cursor:pointer;
-    }
-    .contact button:hover {background:#555;}
-
-    footer {
-      text-align:center;
-      padding:1.5rem;
-      background:#1a1a1a;
-      font-size:.9rem;
-    }
-  </style>
 </head>
 <body>
-
   <header>
-    <div class="header-container">
-      <h1>BlackHat</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>BlackHat</h1>
     <p class="subtitle">Portfolio et projets</p>
   </header>
 
   <section class="banner">
-    <div class="banner-text">Bienvenue dans mon univers</div>
+    <div class="banner-content">
+      <h2>Bienvenue dans mon univers</h2>
+      <p>Exploration, cybersécurité et créativité</p>
+    </div>
+    <img src="paper.jpg" alt="Bannière BlackHat">
   </section>
 
   <main>
-    <section class="about" id="about">
+    <section class="about">
       <h2>À propos</h2>
-      <p>Je suis BlackHat, passionné de technologie et de cybersécurité.
+      <p>Je suis BlackHat, passionné de technologie et de cybersécurité.  
          Ce portfolio présente mes projets et mes expérimentations.</p>
     </section>
 
-    <section class="projects" id="portfolio">
+    <section class="projects">
       <h2>Projets récents</h2>
+
       <div class="project">
-        <img src="html.png" alt="HTML">
-        <h3>J'apprends le développement web de A à Z</h3>
-        <p>J'ai commencé à apprendre le développement web de A à Z.</p>
-        <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="btn">En voir plus</a>
-      </div>
+  <img src="html.png" alt="HTML">
+  <h3>J'apprend le developpement web de A à Z :</h3>
+  <p>J'ai commencer a apprendre le developpement web De A a Z</p>
+  <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="btn">En voir plus</a>
+</div>
+
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact">
       <h2>Contact</h2>
       <form action="https://formspree.io/f/mblaelgp" method="POST">
         <label for="email">Votre email :</label>
@@ -212,6 +56,226 @@
   <footer>
     <p>© 2025 BlackHat – Tous droits réservés</p>
   </footer>
-
 </body>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.banner {
+  width: 2560px;
+  max-width: 100%;
+  height: 340px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.banner-content h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projects .project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+}
+
+.projects h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  margin-bottom: 0.8rem;
+}
+
+.project .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.project .btn:hover {
+  background: #555;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+}
+
+.contact h2 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #333;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  font-size: 0.9rem;
+}
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.project {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project h3 {
+  margin: 15px 0 5px;
+  font-size: 1.4rem;
+}
+
+.project p {
+  padding: 0 15px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.project .btn {
+  display: inline-block;
+  margin: 15px 0 20px;
+  padding: 8px 18px;
+  background: #e50914;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.project .btn:hover {
+  background: #b00710;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+</style>
 </html>
+
+
