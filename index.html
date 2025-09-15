@@ -1,281 +1,91 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8"/>
-  <title>BlackHat – Portfolio</title>
-  <meta name="description" content="Portfolio BlackHat">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>BlackHat</h1>
-    <p class="subtitle">Portfolio et projets</p>
-  </header>
-
-  <section class="banner">
-    <div class="banner-content">
-      <h2>Bienvenue dans mon univers</h2>
-      <p>Exploration, cybersécurité et créativité</p>
-    </div>
-    <img src="paper.jpg" alt="Bannière BlackHat">
-  </section>
-
-  <main>
-    <section class="about">
-      <h2>À propos</h2>
-      <p>Je suis BlackHat, passionné de technologie et de cybersécurité.  
-         Ce portfolio présente mes projets et mes expérimentations.</p>
-    </section>
-
-    <section class="projects">
-      <h2>Projets récents</h2>
-
-      <div class="project">
-  <img src="html.png" alt="HTML">
-  <h3>J'apprend le developpement web de A à Z :</h3>
-  <p>J'ai commencer a apprendre le developpement web De A a Z</p>
-  <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="btn">En voir plus</a>
-</div>
-
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <form action="https://formspree.io/f/mblaelgp" method="POST">
-        <label for="email">Votre email :</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Votre message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 BlackHat – Tous droits réservés</p>
-  </footer>
-</body>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Styles généraux */
 body {
-  font-family: 'Inter', sans-serif;
-  background: #121212;
-  color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #f0f0f0;
   line-height: 1.6;
 }
 
 header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 40px 20px 20px;
+  background: #111;
 }
 
 header h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-header .subtitle {
-  font-size: 1.2rem;
+.subtitle {
   color: #aaa;
+  font-size: 1.2rem;
 }
 
-.banner {
-  width: 2560px;
-  max-width: 100%;
-  height: 340px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
+/* Bannière */
 .banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgba(0,0,0,0.4);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-}
-
-.banner-content h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
+/* Sections */
 main {
+  padding: 40px 20px;
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: auto;
 }
 
-main h2 {
-  font-family: 'Dancing Script', cursive;
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
 }
 
+/* Projets */
 .projects .project {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #1e1e1e;
-  border-radius: 8px;
-}
-
-.projects h3 {
-  font-family: 'Caveat', cursive;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.project img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.project p {
-  margin-bottom: 0.8rem;
-}
-
-.project .btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.project .btn:hover {
-  background: #555;
-}
-
-.contact {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: #1e1e1e;
-  border-radius: 8px;
-}
-
-.contact h2 {
-  font-family: 'Dancing Script', cursive;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.contact button {
-  background: #333;
-  color: #fff;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.contact button:hover {
-  background: #555;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
   background: #1a1a1a;
-  font-size: 0.9rem;
-}
-#projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
 }
 
-.project {
-  background: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-}
-
-.project img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.project h3 {
-  margin: 15px 0 5px;
-  font-size: 1.4rem;
-}
-
-.project p {
-  padding: 0 15px;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-.project .btn {
-  display: inline-block;
-  margin: 15px 0 20px;
-  padding: 8px 18px;
-  background: #e50914;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.project .btn:hover {
-  background: #b00710;
-}
-
-.project:hover {
+.projects .project:hover {
   transform: translateY(-5px);
 }
 
-</style>
-</html>
+/* Contact */
+.contact a {
+  color: #4fa3ff;
+  text-decoration: none;
+}
 
+.contact a:hover {
+  text-decoration: underline;
+}
 
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
